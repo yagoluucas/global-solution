@@ -1,0 +1,57 @@
+main {
+    width: 80%;
+    margin: 20px auto 0 auto;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+img {
+    width: 400px;
+}
+
+section {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section > .desidratacao h2, p{
+    margin: 20px 0;
+}
+
+main > section > .desidratacao p {
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ADD8E6;
+    border-radius: 5px;
+    margin-top: 30px;
+    color: #000;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+a:hover {
+    background-color: #4ebce1;
+}
+
+
+@media screen and (max-width: 600px) {
+    section {
+        flex-wrap: wrap;
+    }
+
+    section .desidratacao {
+        margin-top: 0;
+    }
+}

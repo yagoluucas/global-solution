@@ -1,0 +1,24 @@
+header {
+    background: #ADD8E6 url(../image/engin-akyurt-PCpoG06fcUI-unsplash.jpg) center center no-repeat;
+    height: 50vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+header > h1 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 10px;
+    color: #ffff;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    header > h1 {
+        width: 85%;
+    }
+}
