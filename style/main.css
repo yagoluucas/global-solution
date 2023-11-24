@@ -1,8 +1,7 @@
-main {
-    width: 80%;
-    margin: 20px auto 0 auto;
+.container {
+    width: 85%;
+    margin: 0 auto;
 }
-
 p {
     font-size: 1.3rem;
 }
@@ -18,7 +17,6 @@ img {
 section {
     display: flex;
     gap: 35px;
-    justify-content: center;
     align-items: center;
 }
 
@@ -30,7 +28,7 @@ main > section > .desidratacao p {
     margin-bottom: 30px;
 }
 
-a {
+main > a {
     text-decoration: none;
     padding: 10px;
     background-color: #ADD8E6;
