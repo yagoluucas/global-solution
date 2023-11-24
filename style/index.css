@@ -1,3 +1,22 @@
+.primeira-secao {
+    background: #ADD8E6 url(../image/engin-akyurt-PCpoG06fcUI-unsplash.jpg) center center no-repeat;
+    height: 60vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.primeira-secao > h1 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 10px;
+    color: #ffff;
+    width: 50%;
+    margin: 10vh auto 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
 .container {
     width: 85%;
     margin: 0 auto;
@@ -28,7 +47,7 @@ main > section > .desidratacao p {
     margin-bottom: 30px;
 }
 
-main > a {
+main a {
     text-decoration: none;
     padding: 10px;
     background-color: #ADD8E6;
@@ -37,14 +56,17 @@ main > a {
     color: #000;
     transition: 0.3s;
     font-size: 1.1rem;
+    font-weight: 900;
 }
 
-a:hover {
+main a:hover {
     background-color: #4ebce1;
 }
 
-
 @media screen and (max-width: 600px) {
+    .primeira-secao > h1 {
+        width: 85%;
+    }
     section {
         flex-wrap: wrap;
     }

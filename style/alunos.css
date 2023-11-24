@@ -1,0 +1,41 @@
+main {
+    margin: 150px auto 0 auto;
+    width: 90%;
+}
+
+main > h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 40px auto;
+    color: #175fcb;
+}
+
+div.alunos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section {
+    color: #ffff;
+    padding: 20px;
+    background: #2c65bb;
+    border: none;
+    border-radius: 3px;
+}
+
+main > div > section > h2 {
+    font-size: 1.8rem;
+}
+
+main > div > section p {
+    font-size: 1.3rem;
+}
+
+main > div > section img {
+    width: 45px;
+}
+
+@media screen and (max-width: 600px) {
+    
+}
