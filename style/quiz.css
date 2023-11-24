@@ -1,0 +1,74 @@
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    background-color: rgb(48, 96, 160);
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 30px 0;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+main label {
+    font-size: 1.3rem;
+    padding-left: 10px;
+}
+
+main .pergunta {
+    border: 1px solid #669ef1;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px;
+    margin: 20px auto;
+    border-radius: 40px;
+    font-family: 'Kanit', sans-serif;
+    width: 85%;
+}
+
+main .pergunta div {
+    margin: 8px 0;
+}
+
+.button{
+    background:#ffffff;
+    font-weight: 750;
+    width: 160px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    box-shadow: 0 0 10px;
+    cursor: pointer;
+    display: block;
+
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 85%;
+    }
+}
+>>>>>>> 73fdc496077f2a7ae1909c1bb8bb621e66618006
