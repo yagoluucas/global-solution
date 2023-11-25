@@ -6,8 +6,12 @@
     align-items: center;
 }
 
+main h3 {
+    font-size: 1.3rem;
+}
+
 .primeira-secao > h1 {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(44, 101, 187, 0.8);
     padding: 20px 10px;
     color: #ffff;
     width: 50%;
@@ -19,31 +23,35 @@
 
 .container {
     width: 85%;
-    margin: 0 auto;
+    margin: 60px auto;
 }
-p {
+
+main p {
     font-size: 1.3rem;
 }
 
-h2 {
-    font-size: 1.6rem;
+main h2 {
+    font-size: 2rem;
+    color:#2c65bb ;
 }
 
-img {
-    width: 400px;
+main > section > img {
+    min-width: 259px;
+    width: 100%;
+    max-width: 400px;
 }
 
-section {
+main section {
     display: flex;
-    gap: 35px;
+    gap: 50px;
     align-items: center;
 }
 
-main > section > .desidratacao h2, p{
+main > section > .informacoes h2, p{
     margin: 20px 0;
 }
 
-main > section > .desidratacao p {
+main > section > .informacoes p {
     margin-bottom: 30px;
 }
 
@@ -53,7 +61,7 @@ main a {
     background-color: #ADD8E6;
     border-radius: 5px;
     margin-top: 30px;
-    color: #000;
+    color: #1565dd;
     transition: 0.3s;
     font-size: 1.1rem;
     font-weight: 900;
@@ -61,6 +69,96 @@ main a {
 
 main a:hover {
     background-color: #4ebce1;
+}
+
+.container-conta {
+    display: flex;
+    align-items: center;
+}
+
+.container-conta > div {
+    flex: 1;
+    width: 100%;
+}
+
+.container-calculo form {
+    font-size: 1.5rem;
+}
+
+.container-calculo form input {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container-calculo form input.btn-resultado {
+    background:#1565dd ;
+    color: #ffff;
+    text-transform: uppercase;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.container-calculo form input.btn-resultado:hover {
+    background: #003078;
+}
+
+.container-calculo form label {
+    color: #2c65bb;
+    font-weight: 600;
+}
+
+.habitos-hidratacao {
+    flex-direction: column;
+    align-items: normal;
+    gap: 10px;
+}
+
+.habitos-hidratacao > .habitos{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.habitos-bons, .habitos-ruins {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+.habitos-hidratacao > .habitos h3 {
+    color: #003078;
+}
+
+.icones-habitos {
+    display: flex;
+}
+
+.habitos-hidratacao .icones-habitos img {
+    margin: auto 5px;
+    width: 64px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.habitos-bons .icones-habitos img{
+    margin: auto 1px;
+}
+
+.habitos-ruins {
+    background: rgba(239, 25, 25, 0.5);
+}
+
+.habitos-bons {
+    background: rgba(16, 177, 56, 0.5);
 }
 
 @media screen and (max-width: 600px) {
@@ -74,4 +172,13 @@ main a:hover {
     section .desidratacao {
         margin-top: 0;
     }
+
+    .container-conta {
+        flex-direction: column;
+    }
+
+    .habitos {
+        flex-direction: column;
+    }
+    
 }

@@ -1,6 +1,6 @@
  
 body {
-    background-color: rgb(48, 96, 160);
+    background-color: rgb(96, 151, 222);
 }
 
 ul {
@@ -37,13 +37,11 @@ main label {
 }
  
 main .pergunta {
-    border: 1px solid #669ef1;
     background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 0 10px;
     margin: 20px auto;
     border-radius: 40px;
-    font-family: 'Kanit', sans-serif;
     width: 85%;
 }
  
