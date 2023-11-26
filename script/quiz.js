@@ -15,8 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 const containerResultado = document.querySelector('.js-container-resultado')
                 const divIconesNav = document.querySelector('.js-icones-navegacao')
                 let escolhasCertas = 0;
-                console.log(respostasEscolhidas)
-                if(respostasEscolhidas.length > 0) {
+                
+                if(respostasEscolhidas.length == 5) {
                     if(respostasEscolhidas[0].value == 'Agua') {
                         primeiraResposta.classList.remove('resposta-incorreta')
                         primeiraResposta.classList.add('resposta-correta')
@@ -62,12 +62,12 @@ window.addEventListener('DOMContentLoaded', () => {
                         quartaResposta.innerHTML = 'Poxa, você precisa comer esse tipo de alimento pois ele vai te ajudar a se manter hidratado, clique <a href="https://www.capesesp.com.br/alimentos-que-hidratam" target="_blank">aqui</a> e veja alguns deles'
                     }
 
-                    if(respostasEscolhidas[4].value = 'regularmente') {
+                    if(respostasEscolhidas[4].classList.contains('correta')) {
                         quintaResposta.classList.add('resposta-correta')
                         quintaResposta.textContent = 'Parabens, a melhor forma de você se manter hidratado é bebendo água e para isso não é necessario estar com sede'
                         escolhasCertas++
                     } else {
-                        quintaResposta.classList.add('resposta-correta')
+                        quintaResposta.classList.add('resposta-incorreta')
                         quintaResposta.textContent = 'Para se manter hidratado é preciso beber, então lembre-se de ter isso na sua rotina, tenha uma garrafinha e beba agua varias vezes ao dia mesmo estando sem sede'
                     }
     
@@ -80,11 +80,11 @@ window.addEventListener('DOMContentLoaded', () => {
                         quantidadeAcertada.innerHTML = `Sua pontuação foi : ${escolhasCertas}. Meus parabéns, voce tem uma boa rotina para se manter saudavel, caso queria saber mais clique <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/saude/noticias/?p=322034"target="_blank">aqui</a>`
                     }
                     divIconesNav.style.marginBottom = '5px';
-
+                    nenhumaResposta.textContent = ''
                     containerResultado.classList.remove('none')
                     
                 } else {
-                    nenhumaResposta.textContent = "Você não respondeu nenhuma pergunta!"
+                    nenhumaResposta.textContent = "Responda todas as perguntas antes de continuar"
                 }
             })
 
