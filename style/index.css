@@ -1,6 +1,7 @@
 .primeira-secao {
     background: #ADD8E6 url(../image/engin-akyurt-PCpoG06fcUI-unsplash.jpg) center center no-repeat;
-    height: 60vh;
+    height: 70vh;
+    max-height: 80vh;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -84,6 +85,7 @@ main a.btn-saiba-mais:hover {
 .container-conta {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .container-conta > div {
@@ -118,6 +120,11 @@ main a.btn-saiba-mais:hover {
     background: #003078;
 }
 
+.container-calculo form input.btn-disabled:hover {
+    background:#1565dd ;
+    cursor: auto;
+}
+
 .container-calculo form label {
     color: #2c65bb;
     font-weight: 600;
@@ -127,6 +134,7 @@ main a.btn-saiba-mais:hover {
     flex-direction: column;
     align-items: normal;
     gap: 10px;
+    margin-bottom: 0;
 }
 
 .habitos-hidratacao > .habitos{
@@ -143,6 +151,7 @@ main a.btn-saiba-mais:hover {
     flex-direction: column;
     border-radius: 10px;
     padding: 15px 10px 0 10px;
+    width: 100%;
 }
 
 .habitos-hidratacao > .habitos h3 {
@@ -193,6 +202,18 @@ span.peso-invalido {
     transition: 0.4s;
 }
 
+/* texto dos hábitos */
+
+p.mostar-informacoes {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.habitos-texto-icones {
+    color: #03398a;
+    font-weight: 600;
+}
+
 @keyframes mostrar-quiz {
     0% {
         transform: translateX(-20px);
@@ -205,12 +226,13 @@ span.peso-invalido {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .primeira-secao > h1 {
         width: 85%;
     }
     section {
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     section .desidratacao {
@@ -225,4 +247,10 @@ span.peso-invalido {
         flex-direction: column;
     }
     
+}
+
+@media screen and (max-width: 400px) {
+    .habitos-hidratacao .icones-habitos img {
+        width: 50px;
+    }
 }

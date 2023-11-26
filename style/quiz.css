@@ -3,6 +3,7 @@ body {
     background-color: rgb(96, 151, 222);
 }
 
+
 ul {
     list-style: none;
     display: flex;
@@ -18,6 +19,12 @@ h1 {
     margin: 130px 0 20px 0;
     color: rgb(255, 255, 255);
     border-radius: 50px;
+}
+
+.explicacao-quiz {
+    text-align: center;
+    width: 85%;
+    margin: 5px auto;
 }
  
 form {
@@ -36,7 +43,7 @@ main label {
     padding-left: 10px;
 }
  
-main .pergunta {
+main .pergunta,  .container-resultado{
     background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 0 10px;
@@ -63,23 +70,77 @@ main .pergunta div {
 .btn-enviar:hover {
     background: #dcdcdc;
 }
-
+.resposta-correta, .resposta-incorreta, .resposta-mediana {
+    font-weight: 300;
+}
 .resposta-correta {
-    color: #07cc07;
+    color: #07cc07;  
 }
 
 .resposta-incorreta {
     color: #FF0000;
 }
 
+.icones-navegacao {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px auto 100px auto;
+}
+
+.icones-navegacao img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.resposta-mediana {
+    color: #c1a401;
+}
+
 p.quantidade-acertada {
     text-align: center;
     margin: 20px auto;
-    width: 50%;
+}
+
+.container-resultado {
+    flex: 1;
+    width: 70%;
+    text-align: center;
+}
+
+.container-resultado h2 {
+    color: #03398a;
+    font-size: 2rem;
+}
+
+.container-resultado img {
+    width: 70px;
+}
+
+.none {
+    display: none;
+}
+
+.js-respondeu-nenhum {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.container-resultado a {
+    text-decoration: none;
+    color: #0d55c1;
+    transition: 0.3s;
+}
+
+.container-resultado a:hover {
+    color: #518be2;
 }
 
 @media screen and (max-width: 600px) {
    h1 {
     margin-top: 150px;
+   }
+
+   .container-resultado {
+    width: 85%;
    }
 }

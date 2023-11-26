@@ -7,24 +7,35 @@ window.addEventListener('DOMContentLoaded', () => {
         const btnEnviar = document.querySelector('.js-btn-resultado');
         const paragrafoMostraCalculo = document.querySelector('.js-mostar-calculo');
         const mostrarQuiz = document.querySelector('.js-mostrar-quiz')
-        eventosToque.forEach((e) => {
-            btnEnviar.addEventListener(e, () => {
-                const pesoInformado = document.querySelector('.js-valor-peso');
-                console.log(pesoInformado.value.lenght)
-                const peso = parseFloat(pesoInformado.value);
-                if((peso < 0 || peso > 300) && pesoInformado.value.lenght) {
-                    paragrafoMostraCalculo.innerHTML = `Por favor, digite um peso <span class="peso-invalido">Válido</span>`;
-                }
-                else {
-                    let valorLitros = (peso * 35) / 1000;
-                    let valorCopos = (peso * 35) / 250;
-                    paragrafoMostraCalculo.innerHTML = `Você deve beber <span class="valor-agua">${valorLitros} litros de água,</span> que seria equivalente a <span class="valor-agua">${valorCopos.toFixed(2)} copos de 250ml de água</span>.`;
-                    mostrarQuiz.classList.add('mostrar-quiz')
-                    mostrarQuiz.innerHTML = `Quer saber se está tendo bons hábitos para se manter hidratado ? acesse nosso <span classe = ""><a href="quiz.html">Quiz</a> e responda as perguntas, vamos ficar hidratados juntos `
-                }
+        const formulario = document.querySelector('.form-conta')
+
+        formulario.addEventListener('change', () => {
+            const pesoInformado = document.querySelector('.js-valor-peso');
+            if(pesoInformado.value.length == 0) {
+                btnEnviar.setAttribute('disabled', 'true')
+                btnEnviar.classList.add('btn-disabled')
+                btnEnviar.setAttribute('title', 'Informe um valor')
+                console.log('oi')
+            } else {
+                btnEnviar.removeAttribute('disabled')
+                btnEnviar.classList.remove('btn-disabled')
+                btnEnviar.removeAttribute('title')
+                eventosToque.forEach((e) => {
+                    btnEnviar.addEventListener(e, () => {  
+                        const peso = parseFloat(pesoInformado.value);  
+                        if(peso <= 0 || peso> 300) {
+                            paragrafoMostraCalculo.innerHTML = `Por favor, digite um peso <span class="peso-invalido">Válido</span>`;
+                        } else {
+                            let valorLitros = (peso * 35) / 1000;
+                            let valorCopos = (peso * 35) / 250;
+                            paragrafoMostraCalculo.innerHTML = `Você deve beber <span class="valor-agua">${valorLitros} litros de água,</span> que seria equivalente a <span class="valor-agua">${valorCopos.toFixed(2)} copos de 250ml de água</span>.`;
+                            mostrarQuiz.classList.add('mostrar-quiz')
+                            mostrarQuiz.innerHTML = `Quer saber se está tendo bons hábitos para se manter hidratado ? acesse nosso <span classe = ""><a href="quiz.html">Quiz</a> e responda as perguntas, vamos ficar hidratados juntos `
+                        }
+                })
+            })
+            }
         })
-              
-    })
     }
 
     calcularConta();
@@ -41,28 +52,28 @@ window.addEventListener('DOMContentLoaded', () => {
                     const classeImagem = imagem.classList.value
                     switch(classeImagem){
                         case "js-bebidas-alcoolica":
-                            paragrafoHabitosRuins.textContent = 'Não pode comer fast-food'
+                            paragrafoHabitosRuins.innerHTML = '<span class="habitos-texto-icones">Bebidas alcóolicas</span> podem levar a desidratação, por isso voce deve evitar o seu consumo'
                             break
                         case "js-fast-food":
-                            paragrafoHabitosRuins.textContent = 'Não pode sei lá'
+                            paragrafoHabitosRuins.innerHTML = '<span class="habitos-texto-icones">Alimentos industrializados</span> como por exemplos os de fast food contém muito sal e açucar podendo causar desidratação'
                             break
                         case "js-sem-agua":
-                            paragrafoHabitosRuins.textContent = 'Colocar texto sem agua'
+                            paragrafoHabitosRuins.innerHTML = '<span class="habitos-texto-icones">Não beber agua</span> é a principal causa de desidratação, se hidrate!'
                             break
                         case "js-roupa-calor": 
-                            paragrafoHabitosRuins.textContent = 'Colocar texto roupa' 
+                            paragrafoHabitosRuins.innerHTML = '<span class="habitos-texto-icones">Usar roupas inapropriadas</span> em dias de muito calor como moletons e jaquetas pode te levar a desidratação' 
                             break
                         case "js-beber-agua":
-                            paragrafoHabitosBons.textContent = 'Colocar texto beber agua'
+                            paragrafoHabitosBons.innerHTML = '<span class="habitos-texto-icones">Beber agua</span> é a melhor forma de se manter hidratado'
                             break
                         case "js-garrafa-agua":
-                            paragrafoHabitosBons.textContent = 'Colocar texto ter garrafa de agua'  
+                            paragrafoHabitosBons.innerHTML = '<span class="habitos-texto-icones">Ter uma garrafa de agua</span> para ficar com você no dia a dia ajuda a lembrar você a beber agua é uma boa aposta para se manter hidratado'  
                             break
                         case "js-frutas":
-                            paragrafoHabitosBons.textContent = 'Colocar texto comer frutas'
+                            paragrafoHabitosBons.innerHTML = '<span class="habitos-texto-icones">Comer alimentos com muita agua</span> como frutas e legumes ajuda você a se hidratar'
                             break
                         case "js-relogio":
-                            paragrafoHabitosBons.textContent = 'Colocar texto colocar alarme'
+                            paragrafoHabitosBons.innerHTML = '<span class="habitos-texto-icones">Programe um alarme</span>  para lembrar-se de tomar água; isso ajudará a manter-se hidratado'
                             break
                               
                     }

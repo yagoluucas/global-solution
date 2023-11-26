@@ -23,8 +23,9 @@
 
     <main>
         <h1>Veja como está seus hábitos para manter a hidratação</h1>
+        <p class="explicacao-quiz">Esse quiz foi pensando para você verificar e refletir como estão os seus hábitos para se manter hidratado, responda todas as perguntas e ao final dele clique no botão ver o resultado</p>
         <form>
-            <section class="pergunta">
+            <section data-pergunta="primeira-pergunta" class="pergunta js-pergunta-aparecendo">
                 <p>Se voce está com sede em um dia de calor, qual seria a primeira opção para beber?</p>
                 <div><input type="radio" name="primeira-questao" id="primeira-questao-1" value="Agua"><label for="primeira-questao-1">Agua</label></div>
                 <div><input type="radio" name="primeira-questao" id="primeira-questao-2" value="Cerveja"><label for="primeira-questao-2">Cerveja</label></div>
@@ -34,17 +35,17 @@
                 <p class="js-resultado-1"></p>
             </section>
  
-            <section class="pergunta">
-                <p>Como está o seu consumo de bebidas cafeinadas e alcoólicas em comparação com a ingestão de água??</p>
-                <div><input type="radio" name="segunda-questao" id="segunda-questao-1" value="Superior"><label for="segunda-questao-1">Superior</label></div>
-                <div><input type="radio" name="segunda-questao" id="segunda-questao-2" value="Igual"><label for="segunda-questao-2">Igual</label></div>
-                <div><input type="radio" name="segunda-questao" id="segunda-questao-3" value="Inferior"><label for="segunda-questao-3">Inferior</label></div>
+            <section class="pergunta none">
+                <p>Geralmente voce bebe mais agua ou bebibas alcóolicas e cafés ?</p>
+                <div><input type="radio" name="segunda-questao" id="segunda-questao-1" value="Mais Agua"><label for="segunda-questao-1">Mais Agua</label></div>
+                <div><input type="radio" name="segunda-questao" id="segunda-questao-2" value="Igual"><label for="segunda-questao-2">Não tem diferença, bebo igualmente as duas</label></div>
+                <div><input type="radio" name="segunda-questao" id="segunda-questao-3" value="Inferior"><label for="segunda-questao-3">Costumo beber mais bebida alcóolica e café do que água</label></div>
 
                 <p class="js-resultado-2"></p>
             </section>
  
-            <section class="pergunta">
-                <p>Em um dia ensolarado, qual conjunto de roupa você escolheria para caminhar?</p>
+            <section class="pergunta none">
+                <p>Em um dia ensolarado, qual conjunto de roupa você escolheria para caminhar em um parque?</p>
                 <div><input type="radio" name="terceira-questao" id="terceira-questao-1" value="Moletom e Calca"><label for="terceira-questao-1">Moletom e Calça</label></div>
                 <div><input type="radio" name="terceira-questao" id="terceira-questao-2" value="Bone, Regata e Bermuda"><label for="terceira-questao-2">Boné, Regata e Bermuda</label></div>
                 <div><input type="radio" name="terceira-questao" id="terceira-questao-3" value="Touca, Sueter e Calca"><label for="terceira-questao-3">Touca, Suéter e Calça</label></div>
@@ -53,8 +54,8 @@
                 <p class="js-resultado-3"></p>
             </section>
  
-            <section class="pergunta">
-                <p>Você incorpora alimentos ricos em água na sua dieta, como frutas e vegetais?</p>
+            <section data-pergunta="penultima-pergunta" class="pergunta none">
+                <p>Você tem o hábito de consumir frutas e legumes ?</p>
                 <div><input type="radio" name="quarta-questao" id="quarta-questao-1" value="Sempre"><label for="quarta-questao-1">Sempre</label></div>
                 <div><input type="radio" name="quarta-questao" id="quarta-questao-2" value="As vezes"><label for="quarta-questao-2">As vezes</label></div>
                 <div><input type="radio" name="quarta-questao" id="quarta-questao-3" value="Nunca"><label for="quarta-questao-3">Nunca</label></div>
@@ -62,18 +63,28 @@
                 <p class="js-resultado-4"></p>
             </section>
  
-            <section class="pergunta">
+            <section data-pergunta="ultima-pergunta" class="pergunta none">
                 <p>Você ingere água regularmente durante o dia ou somente quando está com sede?</p>
                 <div><input type="radio" name="sexta-questao" id="sexta-questao-1" value="regularmente"><label for="sexta-questao-1">Regularmente</label></div>
                 <div><input type="radio" name="sexta-questao" id="sexta-questao-2" value="somente com sede"><label for="sexta-questao-2">Somente com sede</label></div>
-
                 <p class="js-resultado-5"></p>
             </section>
-
-            <input class="btn-enviar js-btn-quiz" type="button" value="Ver Resultado">
+            <input class="btn-enviar js-btn-quiz none" type="button" value="Ver Resultado">
         </form>
 
-        <p class="quantidade-acertada js-quantidade-acertada"></p>
+        <div class="icones-navegacao js-icones-navegacao">
+            <img class="js-anterior" src="image/anterior.png" alt="icone anterior">
+            <img class="js-proximo" src="image/proximo.png" alt="icone proximo">
+        </div>
+        
+        <p class="js-respondeu-nenhum"></p>
+        <section class="container-resultado js-container-resultado none">
+            <h2>Quiz Concluido</h2>
+            <p class="quantidade-acertada js-quantidade-acertada"></p>
+            <p>Retorne ao inicio com as setas para verificar os feedbacks</p>
+            <p>Clique no icone abaixo para refazer o quiz</p>
+            <a href="quiz.html"><img src="image/recarregar.png" alt="icone de recarregar"></a>
+        </section>
     </main>
 
     <footer>
