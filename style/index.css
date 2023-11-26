@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 main h3 {
     font-size: 1.3rem;
 }
@@ -55,7 +60,7 @@ main > section > .informacoes p {
     margin-bottom: 30px;
 }
 
-main a {
+main a.btn-saiba-mais {
     text-decoration: none;
     padding: 10px;
     background-color: #ADD8E6;
@@ -67,8 +72,13 @@ main a {
     font-weight: 900;
 }
 
-main a:hover {
+main a.btn-saiba-mais:hover {
     background-color: #4ebce1;
+}
+
+.container-quiz-conta {
+    flex-direction: column;
+    gap: 10px;
 }
 
 .container-conta {
@@ -91,6 +101,7 @@ main a:hover {
     width: 100%;
     padding: 5px;
     border-radius: 5px;
+    font-size: 0.8rem;
 }
 
 .container-calculo form input.btn-resultado {
@@ -131,7 +142,7 @@ main a:hover {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    padding-top: 15px;
+    padding: 15px 10px 0 10px;
 }
 
 .habitos-hidratacao > .habitos h3 {
@@ -161,7 +172,40 @@ main a:hover {
     background: rgba(16, 177, 56, 0.5);
 }
 
-@media screen and (max-width: 600px) {
+/* parte de javascript informando a quantidade de agua */
+span.valor-agua {
+    color: #1565dd;
+}
+
+span.peso-invalido {
+    color: #FF0000;
+    text-transform: uppercase;
+}
+
+/* parte de javascript que mostra o quiz após calcular a agua */
+
+.mostrar-quiz {
+    animation: mostrar-quiz forwards 2s;
+}
+
+.container-quiz-conta a {
+    color: #1565dd;
+    transition: 0.4s;
+}
+
+@keyframes mostrar-quiz {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 750px) {
     .primeira-secao > h1 {
         width: 85%;
     }

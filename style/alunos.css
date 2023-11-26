@@ -1,6 +1,5 @@
 main {
     margin: 150px auto 0 auto;
-    width: 90%;
 }
 
 main > h1 {
@@ -16,10 +15,14 @@ div.alunos {
     justify-content: space-around;
 }
 
+div.alunos section {
+    margin: auto 30px 20px 30px;
+}
+
 div.alunos > section > img {
     width: 100%;
     height: 60vh;
-    min-width: 200px;
+    min-width: 150px;
     max-width: 360px;
     border-radius: 5px;
     margin: 10px auto;
@@ -31,7 +34,8 @@ main section {
     background: #2c65bb;
     border: none;
     border-radius: 3px;
-    margin: 30px
+    margin: 30px auto;
+    width: 90%;
 }
 
 main > div > section > h2 {
@@ -39,7 +43,7 @@ main > div > section > h2 {
 }
 
 main > div > section p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 5px auto;
 }
 

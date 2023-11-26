@@ -35,7 +35,7 @@
                     uma baixa ingestão, maus hábitos ou outras doenças, dessa forma você pode ter sinais e sintomas de
                     boca seca, tonturas, o seu suor pode diminuir assim como a sua urina pode ficar mais amarelada
                 </p>
-                <a href="">Saiba mais</a>
+                <a class="btn-saiba-mais" href="">Saiba mais</a>
             </div>
 
             <img src="image/barra.png" alt="imagem de mulher com a mão na cabeça">
@@ -48,7 +48,7 @@
                     perferendis, sit laudantium. Repellendus repudiandae, cupiditate impedit hic modi possimus corporis
                     dolorum quos officia velit aliquid molestias recusandae soluta! Culpa necessitatibus ut id iusto
                     veritatis dicta ullam quaerat provident quod quas. Culpa officiis natus unde voluptate.</p>
-                <a href="">Saiba mais</a>
+                <a class="btn-saiba-mais" href="">Saiba mais</a>
             </div>
 
             <img class="img-mudanca-climatica" src="image/mudanca-climatica.png"
@@ -56,23 +56,26 @@
 
         </section>
 
-        <section class="container container-conta">
-            <div>
-                <h2>Calcule sua ingestão ideal de água</h2>
-                <p>É possível determinar a quantidade diária de água que você deve consumir por meio de um cálculo
-                    simples. Esse cálculo leva em consideração o seu peso corporal, sendo calculado multiplicando-se o
-                    seu peso por 35 ml de água</p>
-            </div>
-            <div class="container-calculo">
-                <form>
-                    <label for="peso">Digite seu peso:</label><input type="number" value="peso" id="peso" min="0"
-                        max="300" required>
-                    <input class="btn-resultado js-btn-resultado" type="button" value="Ver Resultado">
-                </form>
+        <section class="container container-quiz-conta">
+            <div class="container-conta">
                 <div>
-                    <p class="p-calculo js-mostar-calculo"></p>
+                    <h2>Calcule sua ingestão ideal de água</h2>
+                    <p>É possível determinar a quantidade diária de água que você deve consumir por meio de um cálculo
+                        simples. Esse cálculo leva em consideração o seu peso corporal, sendo calculado multiplicando-se o
+                        seu peso por 35 ml de água</p>
+                </div>
+                <div class="container-calculo">
+                    <form>
+                        <label for="peso">Digite seu peso:</label><input class="js-valor-peso" type="number" id="peso" min="0" max="300" required="true">
+                        <input class="btn-resultado js-btn-resultado" type="button" value="Ver Resultado">
+                    </form>
+                    <div>
+                        <p class="p-calculo js-mostar-calculo"></p>
+                    </div>
                 </div>
             </div>
+
+            <p class="js-mostrar-quiz"></p>
         </section>
 
         <section class="container habitos-hidratacao">
@@ -84,10 +87,10 @@
                     <h3>Habitos Ruins</h3>
                     <p>Clique no icone para ver a descrição</p>
                     <div class="icones-habitos">
-                        <img src="image/icons8-drinks-64.png" alt="Bebidas alcolicas juntas">
-                        <img src="image/icons8-comida-fast-food-street-food-18-64.png" alt="comida de Fast-Food">
-                        <img src="image/icons8-no-water-53.png" alt="agua com risco no meio">
-                        <img src="image/icons8-fato-de-treino-48.png" alt="Jaqueta de frio">
+                        <img class="js-bebidas-alcoolica" src="image/icons8-drinks-64.png" alt="Bebidas alcolicas juntas">
+                        <img class="js-fast-food" src="image/icons8-comida-fast-food-street-food-18-64.png" alt="comida de Fast-Food">
+                        <img class="js-sem-agua" src="image/icons8-no-water-53.png" alt="agua com risco no meio">
+                        <img class="js-roupa-calor" src="image/icons8-fato-de-treino-48.png" alt="Jaqueta de frio">
                     </div>
 
                     <p class="mostar-informacoes js-mostar-informacoes-ruins"></p>
@@ -97,10 +100,10 @@
                     <h3>Habitos Bons</h3>
                     <p>Clique no icone para ver a descrição</p>
                     <div class="icones-habitos">
-                        <img src="image/icons8-drink-water-66.png" alt="Homem bebendo agua">
-                        <img src="image/icons8-garrafa-de-água-100.png" alt="garrafa de agua">
-                        <img src="image/icons8-fruits-64.png" alt="grupo de frutas">
-                        <img src="image/icons8-relógio-despertador-48.png" alt="relogio">
+                        <img class="js-beber-agua" src="image/icons8-drink-water-66.png" alt="Homem bebendo agua">
+                        <img class="js-garrafa-agua" src="image/icons8-garrafa-de-água-100.png" alt="garrafa de agua">
+                        <img class="js-frutas" src="image/icons8-fruits-64.png" alt="grupo de frutas">
+                        <img class="js-relogio" src="image/icons8-relógio-despertador-48.png" alt="relogio">
                     </div>
                     <p class="mostar-informacoes js-mostar-informacoes-bons"></p>
                 </div>
@@ -147,6 +150,8 @@
             </nav>
         </section>
     </footer>
+
+    <script src="script/index.js"></script>
 
 </body>
 
