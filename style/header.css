@@ -17,6 +17,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    box-shadow: 1px 1px 1px silver;
 }
 
 header a {

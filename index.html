@@ -65,7 +65,7 @@
                 <div class="container-calculo">
                     <form class="form-conta">
                         <label for="peso">Digite seu peso:</label><input class="js-valor-peso" type="number" id="peso" min="0" max="300">
-                        <input class="btn-resultado btn-disabled js-btn-resultado" type="button" value="Ver Resultado" disabled title="Informe um valor">
+                        <input class="btn-resultado js-btn-resultado" type="button" value="Ver Resultado" disabled title="Informe um valor">
                     </form>
                     <div>
                         <p class="p-calculo js-mostar-calculo"></p>
@@ -146,6 +146,19 @@
     </footer>
 
     <script src="script/index.js"></script>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "52a0181f-40bb-450d-aa9d-fa6ad965ba51", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "edf3aa1c-cff1-459e-926c-e7f62fc090a5", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
 
 </body>
 

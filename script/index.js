@@ -13,12 +13,11 @@ window.addEventListener('DOMContentLoaded', () => {
             const pesoInformado = document.querySelector('.js-valor-peso');
             if(pesoInformado.value.length == 0) {
                 btnEnviar.setAttribute('disabled', 'true')
-                btnEnviar.classList.add('btn-disabled')
+                // btnEnviar.classList.add('btn-disabled')
                 btnEnviar.setAttribute('title', 'Informe um valor')
-                console.log('oi')
             } else {
                 btnEnviar.removeAttribute('disabled')
-                btnEnviar.classList.remove('btn-disabled')
+                // btnEnviar.classList.remove('btn-disabled')
                 btnEnviar.removeAttribute('title')
                 eventosToque.forEach((e) => {
                     btnEnviar.addEventListener(e, () => {  
