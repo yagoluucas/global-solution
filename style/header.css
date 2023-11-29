@@ -7,6 +7,11 @@ li {
     margin: 0 4px;
 }
 
+header nav img.icone-menu {
+    display: none;
+    width: 45px;
+}
+
 header {
     display: flex;
     font-size: 1.4rem;
@@ -35,4 +40,47 @@ header a:hover {
 
 header > img {
     width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    header a {
+        padding: 2px;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    header nav ul{
+        display: none;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li{
+        margin: 5px auto;
+    }
+
+    header nav ul.mostrar {
+        display: block;
+        animation: animaMenu 0.5s forwards ease;
+    }
+
+    @keyframes animaMenu {
+        0% {
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    header nav img.icone-menu {
+        display: block;
+        cursor: pointer;
+    }
 }
